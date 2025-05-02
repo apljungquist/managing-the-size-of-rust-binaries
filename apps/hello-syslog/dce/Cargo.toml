@@ -1,0 +1,12 @@
+[package]
+name = "hello-syslog--dce"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+log = { workspace = true, features = ["release_max_level_error"] }
+env_logger = { workspace = true }
+syslog = { workspace = true }
+
+[features]
+tty = ["env_logger/auto-color"]

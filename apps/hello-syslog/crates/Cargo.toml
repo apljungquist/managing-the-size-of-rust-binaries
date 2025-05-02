@@ -1,0 +1,11 @@
+[package]
+name = "hello-syslog--crates"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+acap-logging = { git = "https://github.com/apljungquist/acap-rs.git", rev = "ac2cb60a7c826c78911996d85f1641672ff8d230", default-features = false }
+log = { workspace = true }
+
+[features]
+default = ["acap-logging/default"]

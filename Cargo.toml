@@ -1,0 +1,33 @@
+[workspace]
+members = ["apps/*/*"]
+resolver = "2"
+
+[workspace.dependencies]
+acap-dirs = { git = "https://github.com/AxisCommunications/acap-rs.git", rev = "82b12f37b0dd5c756a74851a949b1d5c3567ab1e", default-features = false }
+acap-logging = { version = "0.1.0", default-features = false }
+anyhow = { version = "1.0.93", default-features = false }
+axum = { version = "0.8.4", default-features = false }
+env_logger = { version = "0.11.8", default-features = false }
+futures = { version = "0.3.31", default-features = false }
+libc = { version = "1.0.0-alpha.1", default-features = false }
+log = { version = "0.4.27", default-features = false }
+serde = { version = "1.0.215", default-features = false }
+serde_json = { version = "1.0.133", default-features = false }
+syslog = { version = "7.0.0", default-features = false }
+tempfile = { version = "3.5.0", default-features = false }
+tokio = { version = "1.41.1", default-features = false }
+tower-http = { version = "0.6.2", default-features = false }
+
+[workspace.package]
+edition = "2021"
+
+[profile.conservative]
+inherits = "release"
+codegen-units = 1
+lto = "fat"
+
+[profile.aggressive]
+inherits = "conservative"
+opt-level = "s"
+panic = "abort"
+strip = "symbols"

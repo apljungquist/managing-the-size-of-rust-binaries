@@ -1,0 +1,11 @@
+68k	build/aarch64/hello-world/hello_world
+68k	build/aarch64/hello-world.a
+2.0k	build/aarch64/hello-world.tar.gz
+661k	build/aarch64/web-server.a
+276k	build/aarch64/web-server.tar.gz
+5.7k	build/armv7hf/hello-world.a
+1.7k	build/armv7hf/hello-world.tar.gz
+529k	build/armv7hf/web-server.a
+267k	build/armv7hf/web-server.tar.gz
+34k	build/host/hello-world.a
+1.2k	build/host/hello-world.tar.gz

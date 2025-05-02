@@ -1,0 +1,8 @@
+[package]
+name = "hello-syslog--features"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+acap-logging = "=0.1.0"
+log.workspace = true
